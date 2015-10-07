@@ -10,10 +10,17 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+  
 
+    @IBOutlet weak var num: UILabel!
+    
+    @IBOutlet weak var name: UILabel!
 
-    var detailItem: AnyObject? {
+    @IBOutlet weak var hours: UILabel!
+    
+    @IBOutlet weak var maxno: UILabel!
+    
+    var detailItem: Course? {
         didSet {
             // Update the view.
             self.configureView()
@@ -22,9 +29,30 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail: AnyObject = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
+        if let detail: Course = self.detailItem {
+//            if let label = self.detailDescriptionLabel {
+//                label.text = detail.courseNumber
+//            }
+            
+            if let label = self.num {
+                label.text = detail.courseNumber
+            }
+            
+            if let label = self.name {
+                label.text = detail.courseName
+            }
+            if let label = self.hours {
+                let c = detail.creditHours.description
+                let d = "Hours = "
+                
+                label.text = d + c
+            }
+            
+            if let label = self.maxno {
+                
+                let a = "Max Enrollment = "
+                let b = detail.maxEnrollment.description
+                label.text = a+b
             }
         }
     }

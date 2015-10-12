@@ -15,6 +15,7 @@
 		68C3F79D1BC560C20065174B /* TableViewExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C3F79C1BC560C20065174B /* TableViewExampleTests.swift */; };
 		68C3F7A71BC564260065174B /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C3F7A61BC564260065174B /* Course.swift */; };
 		68C3F7AA1BC568580065174B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C3F7A81BC568580065174B /* Main.storyboard */; };
+		68E68CCD1BC8098500039B84 /* CourseData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68E68CCC1BC8098500039B84 /* CourseData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		68C3F79C1BC560C20065174B /* TableViewExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExampleTests.swift; sourceTree = "<group>"; };
 		68C3F7A61BC564260065174B /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		68C3F7A91BC568580065174B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		68E68CCC1BC8098500039B84 /* CourseData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CourseData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				68C3F78D1BC560C20065174B /* Images.xcassets */,
 				68C3F78F1BC560C20065174B /* LaunchScreen.xib */,
 				68C3F7821BC560C20065174B /* Supporting Files */,
+				68E68CCC1BC8098500039B84 /* CourseData.plist */,
 			);
 			path = TableViewExample;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68C3F7AA1BC568580065174B /* Main.storyboard in Resources */,
+				68E68CCD1BC8098500039B84 /* CourseData.plist in Resources */,
 				68C3F7911BC560C20065174B /* LaunchScreen.xib in Resources */,
 				68C3F78E1BC560C20065174B /* Images.xcassets in Resources */,
 			);
@@ -417,6 +421,7 @@
 				68C3F7A21BC560C20065174B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68C3F7A31BC560C20065174B /* Build configuration list for PBXNativeTarget "TableViewExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +430,7 @@
 				68C3F7A51BC560C20065174B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

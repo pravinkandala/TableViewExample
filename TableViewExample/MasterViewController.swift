@@ -25,6 +25,7 @@ class MasterViewController: UITableViewController {
         objects.append(Course(courseNumber: "CSCI 240", courseName: "Introduction to Programming", creditHours: 4, maxEnrollment: 240))
         objects.append(Course(courseNumber: "CSCI 241", courseName: "Introduction to 241", creditHours: 3, maxEnrollment: 120))
         objects.append(Course(courseNumber: "CSCI 340", courseName: "Introduction to 340", creditHours: 1, maxEnrollment: 200))
+        //
 //
 //        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
 //        self.navigationItem.rightBarButtonItem = addButton

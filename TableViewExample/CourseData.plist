@@ -4,33 +4,33 @@
 <array>
 	<dict>
 		<key>courseNumber</key>
-		<string></string+>
+		<string>CSCI 241</string>
 		<key>courseName</key>
-		<string></string>
+		<string>0</string>
 		<key>creditHours</key>
-		<string></string>
+		<integer>4</integer>
 		<key>maxEnrollment</key>
-		<string></string>
+		<integer>40</integer>
 	</dict>
-    <dict>
-        <key>csci640</key>
-        <string></string>
-        <key>Data Structures</key>
-        <string></string>
-        <key>3</key>
-        <string></string>
-        <key>30</key>
-        <string></string>
-    </dict>
-    <dict>
-        <key>csci350</key>
-        <string></string>
-        <key>ios mobile development</key>
-        <string></string>
-        <key>4</key>
-        <string></string>
-        <key>50</key>
-        <string></string>
-    </dict>
+	<dict>
+		<key>courseNumber</key>
+		<string>CSCI 320</string>
+		<key>courseName</key>
+		<string>Intermediate Programming in C++</string>
+		<key>creditHours</key>
+		<integer>3</integer>
+		<key>maxEnrollment</key>
+		<integer>40</integer>
+	</dict>
+	<dict>
+		<key>courseNumber</key>
+		<string>CSCI 640</string>
+		<key>courseName</key>
+		<string>Assembers</string>
+		<key>creditHours</key>
+		<integer>3</integer>
+		<key>maxEnrollment</key>
+		<integer>40</integer>
+	</dict>
 </array>
 </plist>

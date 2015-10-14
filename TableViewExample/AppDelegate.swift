@@ -16,6 +16,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+/*    Added Lines     */
+        let path = NSBundle.mainBundle().pathForResource("CourseData", ofType:"plist")
+        let array:[AnyObject] = NSArray(contentsOfFile: path!) as! [AnyObject]
+        
+        let navigationController = self.window!.rootViewController as! UINavigationController
+        let masterController = navigationController.childViewControllers[0] as! MasterViewController
+        
+        for dictionary in array{
+            let number = dictionary["courseNumber"]
+            let name = dictionary["courseName"]
+            let credits = dictionary["creditHours"]
+            let max = dictionary["maxEnrollment"]
+            
+            masterController.objects.append(Course(courseNumber:number as! String, courseName: name as! String, creditHours:credits as! Int, maxEnrollment:max as! Int)) //Constructor
+        }
+        
         return true
     }
 

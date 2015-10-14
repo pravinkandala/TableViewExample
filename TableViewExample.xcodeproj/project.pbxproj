@@ -86,12 +86,12 @@
 				68C3F7841BC560C20065174B /* AppDelegate.swift */,
 				68C3F7861BC560C20065174B /* MasterViewController.swift */,
 				68C3F7881BC560C20065174B /* DetailViewController.swift */,
+				68E68CCC1BC8098500039B84 /* CourseData.plist */,
 				68C3F7A61BC564260065174B /* Course.swift */,
 				68C3F7A81BC568580065174B /* Main.storyboard */,
 				68C3F78D1BC560C20065174B /* Images.xcassets */,
 				68C3F78F1BC560C20065174B /* LaunchScreen.xib */,
 				68C3F7821BC560C20065174B /* Supporting Files */,
-				68E68CCC1BC8098500039B84 /* CourseData.plist */,
 			);
 			path = TableViewExample;
 			sourceTree = "<group>";

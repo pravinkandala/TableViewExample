@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             masterController.objects.append(Course(courseNumber:number as! String, courseName: name as! String, creditHours:credits as! Int, maxEnrollment:max as! Int)) //Constructor
         }
         
+        masterController.objects.sort({$0.courseNumber < $1.courseNumber}) //Sort courseNumber
+        
         return true
     }
 

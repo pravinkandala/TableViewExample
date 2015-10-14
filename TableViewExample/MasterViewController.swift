@@ -22,9 +22,9 @@ class MasterViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
         
-        objects.append(Course(courseNumber: "CSCI 240", courseName: "Introduction to Programming", creditHours: 4, maxEnrollment: 240))
-        objects.append(Course(courseNumber: "CSCI 241", courseName: "Introduction to 241", creditHours: 3, maxEnrollment: 120))
-        objects.append(Course(courseNumber: "CSCI 340", courseName: "Introduction to 340", creditHours: 1, maxEnrollment: 200))
+//        objects.append(Course(courseNumber: "CSCI 240", courseName: "Introduction to Programming", creditHours: 4, maxEnrollment: 240))
+//        objects.append(Course(courseNumber: "CSCI 241", courseName: "Introduction to 241", creditHours: 3, maxEnrollment: 120))
+//        objects.append(Course(courseNumber: "CSCI 340", courseName: "Introduction to 340", creditHours: 1, maxEnrollment: 200))
         //
 //
 //        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
@@ -67,7 +67,7 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
         let object = objects[indexPath.row]
-        cell.textLabel!.text = object.courseName
+        cell.textLabel!.text = object.courseNumber
         
         return cell
     }

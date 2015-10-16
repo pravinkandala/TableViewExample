@@ -18,11 +18,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
 /*    Added Lines     */
-        let path = NSBundle.mainBundle().pathForResource("CourseData", ofType:"plist")
-        let array:[AnyObject] = NSArray(contentsOfFile: path!) as! [AnyObject]
+         return true
+    }
+    
+    func preload(){
+    
+    var error: NSError? = nil
+    var downloadFailed = false
+    
+    
+       // let path = NSBundle.mainBundle().pathForResource("CourseData", ofType:"plist")
+       
         
         let navigationController = self.window!.rootViewController as! UINavigationController
         let masterController = navigationController.childViewControllers[0] as! MasterViewController
+    
+        let url = NSURL(string: "https://www.prismnet.com/~mcmahon/cs321.CourseData.json")
+        if let urlData = NSData(contentsOfURL: url!) {
+            
+          if let array:[AnyObject] = NSJSONSerialization.JSONObjectWithData(urlData, options: nil, error: &error) as? [AnyObject] {
         
         for dictionary in array{
             let number = dictionary["courseNumber"]
@@ -35,7 +49,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         masterController.objects.sort({$0.courseNumber < $1.courseNumber}) //Sort courseNumber
         
-        return true
+          }else{
+            downloadFailed = true
+            }
+        }else{ downloadFailed = true
+    }
+        
+        if downloadFailed{
+            let alert = UIAlertView(title: "Error", message: "Unable to download course data", delegate: nil, cancelButtonTitle: "Okay")
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -60,6 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+   
 
 }
 

@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
+        preload()
 /*    Added Lines     */
          return true
     }
@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = self.window!.rootViewController as! UINavigationController
         let masterController = navigationController.childViewControllers[0] as! MasterViewController
     
-        let url = NSURL(string: "https://www.prismnet.com/~mcmahon/cs321.CourseData.json")
+        let url = NSURL(string: "https://www.prismnet.com/~mcmahon/CS321/CourseData.json")
         if let urlData = NSData(contentsOfURL: url!) {
             
           if let array:[AnyObject] = NSJSONSerialization.JSONObjectWithData(urlData, options: nil, error: &error) as? [AnyObject] {
